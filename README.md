@@ -12,7 +12,7 @@ A Windows taskbar widget that shows your Claude Code 5-hour and weekly usage at 
 
 Grab `ClaudeUsage.exe` from the [latest GitHub Release](https://github.com/Shuicohen/claude-usage-tray/releases/latest). No install needed; see Quick start below. Prefer running from source? Clone this repo and use `ClaudeUsage.bat` or the Setup by hand steps.
 
-> **SmartScreen note:** Windows may show a SmartScreen warning ("Windows protected your PC") because this is a new app and the exe is not signed yet. The full source is here; you can also run from source. See [Code signing policy](#code-signing-policy).
+> **SmartScreen note:** Windows may show a SmartScreen warning ("Windows protected your PC") because this is a new app and the exe is not signed yet. The full source is here; you can also run from source. See [Privacy and uninstall](#privacy-and-uninstall).
 
 Shows how much of your Claude **5-hour session** limit and **7-day weekly**
 limit is used, without hovering or clicking. It signs in with the token Claude
@@ -231,22 +231,11 @@ network or touch your credentials, settings, or startup entry.
 
 Issues and pull requests are welcome. Please run the tests (see Tests above) before opening a PR; CI runs them on Windows for every push and pull request.
 
-## Code signing policy
-
-Signing of Windows releases is being requested from SignPath Foundation. Once approved: free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-Release binaries are built only by the GitHub Actions workflow in this repository (`.github/workflows/release.yml`) from tagged source; every signing request is manually approved.
-
-Team roles:
-
-- Committers and reviewers: [Shuicohen](https://github.com/Shuicohen)
-- Approvers: [Shuicohen](https://github.com/Shuicohen)
-
-### Privacy policy
+## Privacy and uninstall
 
 This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it. Its only network connection is to Anthropic (`api.anthropic.com`), to read your own Claude usage using the sign-in token Claude Code already stores on your PC; that is the purpose of the app. Anthropic's handling of that request is covered by [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy). The app collects no telemetry and sends nothing anywhere else.
 
-To uninstall: quit the app from its tray menu, turn off "Start with Windows" (or remove its startup entry), and delete the exe or cloned folder.
+To uninstall: quit the app from its tray menu (right-click > Exit), untick "Run at Windows startup" first if you turned it on, and delete the exe or cloned folder.
 
 ## License
 
